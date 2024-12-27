@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Delete Book</h1>
+<p>Are you sure you want to delete "{{ object.title }}"  ??</p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit"> yes, Delete!!</button>
+</form>
+<a href="{% url 'book_list' %}">Cancel</a>
+
+</body>
+</html>
